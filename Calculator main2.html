@@ -1,0 +1,157 @@
+<!DOCTYPE html>   
+<html>
+   <head>
+      <title>CSS Glassmorphism Working Calculator</title>
+      <style>         @media only screen and (min-width: 412.19px) {
+	* {
+		font-family: mogra;
+		font-size: 7mm;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 10vh;
+		background: #031323;
+	}
+
+	.container {
+		position: relative;
+		background: rgba(184, 50, 50, 0);
+		border-radius: 50px;
+		height: 600px;
+		width: 390px;
+		backdrop-filter: blur(15px);
+		border-top: 1px solid #9200FF;
+		border-left: 1px solid rgba(255, 255, 255, 0.2);
+		box-shadow: 5px 5px 30px rgba(146, 128, 128, 0.76);
+	}
+
+	.container .calculator {
+		position: relative;
+		display: grid;
+		margin: 10px;
+	}
+
+	.container .calculator .value {
+		grid-column: span 4;
+		height: 90px;
+		width: 350px;
+		margin: 10px;
+		text-align: right;
+		border-radius: 30px;
+		border: white;
+		outline: none;
+		padding: 15px;
+		margin-right: 10px;
+		font-size: 25px;
+		background: transparent;
+		color: #fff;
+		border-bottom: 1px solid rgba(11, 233, 0, 1);
+		border-right: 1px solid rgba(0, 191, 253, 1);
+		border-left: 1px solid rgba(253, 0, 0, 1);
+		border-top: 1px solid rgba(197, 253, 0, 1);
+	}
+
+	.container .calculator span {
+		display: grid;
+		align-items: center;
+		justify-items: center;
+		margin-left: 10px;
+		margin-top: 20px;
+		background: rgb(16, 33, 80);
+		height: 70px;
+		width: 80px;
+		border-radius: 50px;
+		backdrop-filter: blur(15px);
+		border-top: 1px solid rgba(28, 255, 0, 0.84);
+		border-left: 1px solid rgba(255, 255, 255, 0.2);
+		box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+		color: #fff;
+		font-size: 5mm;
+	}
+}
+
+@media only screen and (min-width: 979.80px) {
+	* {
+		font-family: mogra;
+		font-size: 77mm;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+		background: #031323;
+	}
+
+	.container {
+		position: relative;
+		background: rgba(184, 50, 50, 0);
+		border-radius: 50px;
+		height: 1400px;
+		width: 900px;
+		backdrop-filter: blur(15px);
+		border-top: 1px solid #9200FF;
+		border-left: 1px solid rgba(255, 255, 255, 0.2);
+		box-shadow: 5px 5px 30px rgba(146, 128, 128, 0.76);
+	}
+
+	.container .calculator {
+		position: relative;
+		display: grid;
+		margin: 20px;
+	}
+
+	.container .calculator .value {
+		grid-column: span 4;
+		height: 320px;
+		width: 830px;
+		margin: 10px;
+		text-align: right;
+		border-radius: 30px;
+		border: white;
+		outline: none;
+		padding: 15px;
+		margin-right: 10px;
+		font-size: 100px;
+		background: transparent;
+		color: #fff;
+		border-bottom: 1px solid rgba(11, 233, 0, 1);
+		border-right: 1px solid rgba(0, 191, 253, 1);
+		border-left: 1px solid rgba(253, 0, 0, 1);
+		border-top: 1px solid rgba(197, 253, 0, 1);
+	}
+
+	.container .calculator span {
+		display: grid;
+		align-items: center;
+		justify-items: center;
+		margin: 20px;
+		background: rgb(16, 33, 80);
+		height: 150px;
+		width: 170px;
+		border-radius: 50px;
+		backdrop-filter: blur(15px);
+		border-top: 1px solid rgba(28, 255, 0, 0.84);
+		border-left: 1px solid rgba(255, 255, 255, 0.2);
+		box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+		color: #fff;
+		font-size: 15mm;
+	}
+}      </style>
+   </head>
+   <body>
+      <div class="container" data-tilt data-tilt-full-page-listening data-tilt-axis="x">
+         <form class="calculator" name="calc">                  <input type="text" readonly class="value" name="txt"/>                  <span class="num clear" onclick="calc.txt.value = ''">c</span>                                    <span class="num delete" onclick="document.calc.txt.value += '^'">^</span>                  <span class="num" onclick="document.calc.txt.value += '%'">%</span>                  <span class="num" onclick="document.calc.txt.value += '/'">/</span>                  <span class="num" onclick="document.calc.txt.value += '7'">7</span>                  <span class="num" onclick="document.calc.txt.value += '8'">8</span>                  <span class="num" onclick="document.calc.txt.value += '9'">9</span>                  <span class="num" onclick="document.calc.txt.value += '-'">-</span>                  <span class="num" onclick="document.calc.txt.value += '4'">4</span>                  <span class="num" onclick="document.calc.txt.value += '5'">5</span>                  <span class="num" onclick="document.calc.txt.value += '6'">6</span>                  <span class="num plus" onclick="document.calc.txt.value += '+'">+</span>                  <span class="num" onclick="document.calc.txt.value += '1'">1</span>                  <span class="num" onclick="document.calc.txt.value += '2'">2</span>                  <span class="num" onclick="document.calc.txt.value += '3'">3</span>                  <span class="num" onclick="document.calc.txt.value += '*'">*</span>                  <span class="num" onclick="document.calc.txt.value += '0'">0</span>                  <span class="num" onclick="document.calc.txt.value += '00'">00</span>                  <span class="num" onclick="document.calc.txt.value += '.'">.</span>                  <span class="num equal" onclick="document.calc.txt.value = eval(calc.txt.value)">=</span>               </form>
+      </div>
+   </body>
+</html>
